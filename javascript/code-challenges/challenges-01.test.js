@@ -28,8 +28,18 @@ Use `forEach` to loop over the input array. Modify each string, and add the upda
 ------------------------------------------------------------------------------------------------ */
 
 const addExclamation = (arr) => {
-  // Solution code here...
+  // Solution code here... 
+
+  const localArray = [];
+  arr.forEach((value) => {
+    localArray.push((value) + '!');
+  });
+
+  return localArray;
 };
+
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -41,7 +51,14 @@ Use `forEach` to loop over the input array. The modified strings should each be 
 
 const allUpperCase = (arr) => {
   // Solution code here...
+
+  let localArray = [];
+  arr.forEach(value => {
+    localArray.push(value.toUpperCase());
+  });
+  return localArray;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -55,10 +72,22 @@ Use `forEach` to build a new array of strings, each string modified by the callb
 
 const greeting = (word) => {
   // Solution code here...
+
+  return word + '!';
+
 };
 
 const speaker = (words, callback) => {
   // Solution code here...
+
+  let localArray = [];
+  words.forEach(value => {
+    let newItem = callback(value);
+    localArray.push(newItem.toUpperCase());
+  });
+
+  return localArray;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -79,10 +108,20 @@ Return the modified array.
 
 const addValues = (arr, value) => {
   // Solution code here...
+
+  arr.push(value);
+
 };
 
 const addNumbers = (num, arr, times, callback) => {
   // Solution code here...
+
+
+  for (let i = 0; i < times; i++) {
+    callback(arr, num);
+  }
+  return arr;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -105,6 +144,16 @@ This function should use forEach to populate your grocery list based on the stor
 
 const createList = (availableItems) => {
   // Solution code here...
+
+  let localArray = [];
+
+  availableItems.forEach(value => {
+    if (value.available) {
+      localArray.push(value.name);
+    }
+  });
+  return localArray;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
