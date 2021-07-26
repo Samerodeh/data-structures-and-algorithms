@@ -4,4 +4,5 @@
 
 | Subject     | links |
 | ----------- | ----------- |
-| array reverse | [python/array-reverse](python/array-reverse) |
+| array reverse | [python/array-reverse/array-reverse.md](python/array-reverse/array-reverse.md) | 
+| array reverse | [python/array-reverse/array-reverse.md](python/array-reverse/array-reverse.md) | 
