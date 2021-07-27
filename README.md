@@ -1,6 +1,6 @@
-# data-structures-and-algorithms 
+# data-structures-and-algorithms
 
-# Table Of Contents 
+# Table Of Contents
 
 | Subject     | links |
 | ----------- | ----------- |
