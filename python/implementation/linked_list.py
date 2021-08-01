@@ -14,7 +14,7 @@ class Linkedlist:
         else:
              return ("---")
 
-    def append(self, data):
+    def insert(self, data):
         node1 = Node(data)
         if self.head==None:
             self.head=node1
@@ -51,9 +51,9 @@ if __name__ == "__main__":
         ListNode = Linkedlist()
 
         ListNode.add(5)
-        ListNode.append(11)
-        ListNode.append(23)
-        ListNode.append(47)
-        ListNode.append(94)
+        ListNode.insert(11)
+        ListNode.insert(23)
+        ListNode.insert(47)
+        ListNode.insert(94)
 
         print(ListNode)
