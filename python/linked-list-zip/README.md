@@ -29,5 +29,80 @@
 2. space : O(1), Because : Knoing the extra space is needed.
 
 ## Solution
-<!-- Show how to run your code, and examples of it in action -->
 
+        
+    class Node:
+     def __init__(self, data):
+        self.data = data
+        self.next = None
+ 
+ 
+
+    class LinkedList:
+     def __init__(self):
+        self.head = None
+ 
+    
+    def append(self):
+        temp = self.head
+        while temp:
+            print(temp.data, end=" ")
+            temp = temp.next
+ 
+    def addToList(self, newData):
+        newNode = Node(newData)
+        if self.head is None:
+            self.head = newNode
+            return
+ 
+        last = self.head
+        while last.next:
+            last = last.next
+ 
+        last.next = newNode
+ 
+     def zip_lists(headA, headB):
+ 
+    storeNode = Node(0)
+ 
+    last = storeNode
+    while True:
+ 
+        if headA is None:
+            last.next = headB
+            break
+        if headB is None:
+            last.next = headA
+            break
+ 
+        if headA.data <= headB.data:
+            last.next = headA
+            headA = headA.next
+        else:
+            last.next = headB
+            headB = headB.next
+        
+        last = last.next
+ 
+    return storeNode.next
+ 
+    listA = LinkedList()
+    listB = LinkedList()
+ 
+    listA.addToList(4)
+    listA.addToList(5)
+    listA.addToList(6)
+ 
+    listB.addToList(1)
+    listB.addToList(2)
+    listB.addToList(3)
+ 
+    listA.head = zip_lists(listA.head, listB.head)
+
+    print("zip_lists is:")
+    listA.append()
+ 
+| Subject     | links |
+| ----------- | ----------- |
+| Linked List zip | [linked_list_zip/linked_list_zip.py](linked_list_zip/linked_list_zip.py) |
+| Test Linked List zip | [tests/test_linked_list_zip.py](tests/test_linked_list_zip.py) |
