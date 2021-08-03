@@ -77,10 +77,23 @@ if __name__ == '__main__':
  My_List = LinkedList()
 for i in range(8, 0, -1):
     My_List.appende(i)
+    My_List.appende(7)
+    My_List.appende(6)
+    My_List.appende(5)
+    My_List.appende(4)
+    My_List.appende(3)
+    My_List.appende(2)
+    My_List.appende(1)
     My_List.print_my_list()
 
 for i in range(1, 9):
     My_List.Kth(i)
     print("Modified List for k = ", i)
     My_List.print_my_list()
-    print("\n")
+    print("\n") 
+
+    
+ 
+
+  
+  
