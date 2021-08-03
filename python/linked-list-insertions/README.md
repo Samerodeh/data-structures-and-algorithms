@@ -82,5 +82,5 @@ What approach did you take ?
 
 | Subject     | links |
 | ----------- | ----------- |
-| Linked list | [linked_list_insertions/linked_list_insertions.py](linked_list_insertions/linked_list_insertions.py) |
-| Test Linked Test | [tests/test_linked_list_insertions.py](tests/test_linked_list_insertions.py) |
+| Linked list insertions | [linked_list_insertions/linked_list_insertions.py](linked_list_insertions/linked_list_insertions.py) |
+| Test Linked list insertions | [tests/test_linked_list_insertions.py](tests/test_linked_list_insertions.py) |
