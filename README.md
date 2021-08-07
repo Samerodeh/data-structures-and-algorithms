@@ -9,4 +9,6 @@
 | array binary-search | [python/array-binary-search/array-binary-search.md](python/array-binary-search/array-binary-search.md) |
 | implementation | [python/implementation/README.md](python/implementation/README.md) |
 | linked_list_insertions | [python/linked-list-insertions/README.md](python/linked-list-insertions/README.md) |
-| linked_list_kth| [python/linked-list-kth/README.md](python/linked-list-kth/README.md) |
+| linked_list_kth | [python/linked-list-kth/README.md](python/linked-list-kth/README.md) |
+| linked_list_zip | [python/linked-list-zip/README.md](python/linked-list-zip/README.md) |
+| Stack and Queue | [python/stack-and-queue/README.md](python/stack-and-queue/README.md) |
