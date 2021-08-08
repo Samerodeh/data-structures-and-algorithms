@@ -15,23 +15,23 @@ class Stack(object):
         else:
             print('Stack overflow')
 
-    def pop(none):
+    def pop(self):
         ''' Pops the top element '''
-        if(none.isEmpty() != True):
-            return none.index.pop()
+        if(self.isEmpty() != True):
+            return self.index.pop()
         else:
             print('Stack is already empty!')
 
-    def peek(none):
+    def peek(self):
         ''' Returns the top element of the stack '''
-        if(none.isEmpty() != True):
-            return none.index[-1]
+        if(self.isEmpty() != True):
+            return self.index[-1]
         else:
             print('Stack is already empty!')
 
-    def isEmpty(none):
+    def isEmpty(self):
         ''' Checks whether the stack is empty '''
-        return len(none.index) == []
+        return len(self.index) == []
 
     def isFull(self):
         ''' Checks whether the stack if full '''
