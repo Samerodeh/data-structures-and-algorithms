@@ -15,23 +15,23 @@ class Queue(object):
         else:
             print('Queue is Full!')
 
-    def dequeue(none):
+    def dequeue(self):
         ''' This function removes an item from the front end of the queue '''
-        if(none.isEmpty() != True):
-            return none.queue.pop()
+        if(self.isEmpty() != True):
+            return self.queue.pop()
         else:
             print('Queue is Empty!')
 
-    def peek(none):
+    def peek(self):
         ''' This function helps to see the first element at the fron end of the queue '''
-        if(none.isEmpty() != True):
-            return none.queue[-1]
+        if(self.isEmpty() != True):
+            return self.queue[-1]
         else:
             print('Queue is Empty!')
 
-    def isEmpty(none):
+    def isEmpty(self):
         ''' This function checks if the queue is empty '''
-        return none.queue == []
+        return self.queue == []
 
     def isFull(self):
         ''' This function checks if the queue is full '''
