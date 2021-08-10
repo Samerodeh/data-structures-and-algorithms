@@ -14,4 +14,5 @@
 | Stack and Queue | [python/stack-and-queue/README.md](python/stack-and-queue/README.md) |
 | stack-queue-pseudo | [python/stack-queue-pseudo/README.md](python/stack-queue-pseudo/README.md) |
 | stack_queue_brackets | [python/stack_queue_brackets/README.md](python/stack_queue_brackets/README.md) |
+| stack-queue-animal-shelter | [python/stack-queue-animal-shelter/README.md](python/stack-queue-animal-shelter/README.md) |
 
