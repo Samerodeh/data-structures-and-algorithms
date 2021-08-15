@@ -24,8 +24,6 @@ def test_PostOrder(fixed_BinaryTree):
     assert (expected, actual, fixed_BinaryTree.PostOrder() == '4 -> 5 -> 2 -> 3 -> 1 -> % ')
 
 
-
-
 def test_add(root,value):
     expected = 'root, 1'
     actual = 'root, 1'
