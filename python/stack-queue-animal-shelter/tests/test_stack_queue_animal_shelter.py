@@ -20,4 +20,6 @@ def test_dequeue():
     excepted = ('cat')
     actual = ('popo', 'parrot ')
     excepted = 'Not Cat or Dog'
+
     assert actual == excepted
+

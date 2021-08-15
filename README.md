@@ -16,3 +16,5 @@
 | stack_queue_brackets | [python/stack_queue_brackets/README.md](python/stack_queue_brackets/README.md) |
 | stack-queue-animal-shelter | [python/stack-queue-animal-shelter/README.md](python/stack-queue-animal-shelter/README.md) |
 | trees | [python/trees/README.md](python/trees/README.md) |
+| tree-max | [python/tree-max/README.md](python/tree-max/README.md) |
+
