@@ -18,4 +18,4 @@
 | trees | [python/trees/README.md](python/trees/README.md) |
 | tree-max | [python/tree-max/README.md](python/tree-max/README.md) |
 | tree-breadth-first | [python/tree-breadth-first/README.md](python/tree-breadth-first/README.md) |
-| tree-fizz-buzz | [tree-fizz-buzz/README.md](tree-fizz-buzz/README.md) |
+| tree-fizz-buzz | [python/tree-fizz-buzz/README.md](python/tree-fizz-buzz/README.md) |
