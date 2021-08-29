@@ -19,3 +19,4 @@
 | tree-max | [python/tree-max/README.md](python/tree-max/README.md) |
 | tree-breadth-first | [python/tree-breadth-first/README.md](python/tree-breadth-first/README.md) |
 | tree-fizz-buzz | [tree-fizz-buzz/README.md](tree-fizz-buzz/README.md) |
+| insertion-sort | [python/insertion-sort/BLOG.md](python/insertion-sort/BLOG.md) |
