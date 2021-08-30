@@ -20,3 +20,4 @@
 | tree-breadth-first | [python/tree-breadth-first/README.md](python/tree-breadth-first/README.md) |
 | tree-fizz-buzz | [tree-fizz-buzz/README.md](tree-fizz-buzz/README.md) |
 | insertion-sort | [python/insertion-sort/README.md](python/insertion-sort/README.md) |
+| merge-sort | [python/merge-sort/README.md](python/merge-sort/README.md) |
