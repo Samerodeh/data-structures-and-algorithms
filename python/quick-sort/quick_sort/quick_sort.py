@@ -1,29 +1,29 @@
-def SelectionSort(arr):
-    elements = len(arr)
-    if elements < 1:
+def Partition(arr, left, right):
+    i = (left-1)        
+    pivot = arr[right]     
+  
+    for j in range(left, right):
+        if arr[j] <= pivot:
+            i = i+1
+            arr[i], arr[j] = arr[j], arr[i]
+
+    arr[i+1], arr[right] = arr[right], arr[i+1]
+    return (i+1)
+  
+def QuickSort(arr, left, right):
+    if len(arr) == 1:
         return arr
-    
-    curr = 0 
 
-    for i in range(1, elements):
-         if arr[i] <= arr[0]:
-              curr += 1
-              temp = arr[i]
-              arr[i] = arr[curr]
-              arr[curr] = temp
+    if left < right:
+        p = Partition(arr, left, right)
 
-    temp = arr[0]
-    arr[0] = arr[curr] 
-    arr[curr] = temp 
-    
-    left = SelectionSort(arr[0:curr])  
-    right = SelectionSort(arr[curr+1:elements]) 
-    arr = left + [arr[curr]] + right 
-
-    return arr
+        QuickSort(arr, left, p-1)
+        QuickSort(arr, p+1, right)
 
 if __name__ == '__main__':
 
-  array = [8,4,23,42,16,15]
-  print("Original Array: ",array)
-  print("Sorted Array: ",SelectionSort(array))
+  arr = [8, 4, 23, 42, 16, 15]
+  n = len(arr)
+  QuickSort(arr, 0, n-1)
+  print("Sorted array :")
+  print(arr)

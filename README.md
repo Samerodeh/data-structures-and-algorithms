@@ -22,5 +22,3 @@
 | insertion-sort | [python/insertion-sort/README.md](python/insertion-sort/README.md) |
 | merge-sort | [python/merge-sort/README.md](python/merge-sort/README.md) |
 | quick-sort | [python/quick-sort/README.md](python/quick-sort/README.md) |
-
-
