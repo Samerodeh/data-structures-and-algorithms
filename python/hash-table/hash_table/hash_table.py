@@ -1,62 +1,74 @@
-class HashTable :
-  def __init__(self, size = 1024):
-    self.size = size
-    self._buckets = [None] *self.size
+class HashTable:
+    def __init__(self, size):
+        self.size = size
+        self.hash_table = self.create_buckets()
+  
+    def create_buckets(self):
+        return [[] for _ in range(self.size)]
+  
+    def add(self, key, value):
+        """
+        # add value into hash map
+        # Get the index from the key
+        # using hash function
+        # Get the bucket corresponding to index
+        # check if the bucket has same key as
+        # the key to be inserted
+        # If the bucket has same key as the key to be inserted,
+        # Update the key value
+        # Otherwise append the new key-value pair to the bucket
+        # parameters: key, value
+        """ 
 
-  def add(self,key,value):
-    """
-    Add a value to our array by its key 
-
-    parameters:
-         key, value
-    """
-    index = self.hash(key)
-
-    if not self._buckets[index]:
-      self._buckets[index]=[[key,value]]
-    else:
-      self._buckets[index].append([key,value])
-
-  def get(self,key):
-    """
-    Get value by key 
-
-    parameters:
-        key
-
-    return: 
-       the value 
-      """
-    index = self.hash[key]
-    return index
+        hashed_key = hash(key) % self.size
+        bucket = self.hash_table[hashed_key]
+        found_key = False
+        for index, record in enumerate(bucket):
+            record_key, record_value = record
+            if record_key == key:
+                found_key = True
+                break
+        if found_key:
+            bucket[index] = (key, value)
+        else:
+            bucket.append((key, value))
+  
     
-  def contains(self,key):
-    """
-    Check if the value in key exist
+    def get(self, key):
+        """
+        # Return searched value with specific key
+        # Get the index from the key using
+        # hash function
+        # Get the bucket corresponding to index
+        # check if the bucket has same key as 
+        # the key being searched
+        # If the bucket has same key as the key being searched,
+        # Return the value found
+        # Otherwise indicate there was no record found
+        # parameters: key
+        """ 
 
-    parameters:
-        key
+        hashed_key = hash(key) % self.size
+        bucket = self.hash_table[hashed_key]
+        found_key = False
+        for index, record in enumerate(bucket):
+            record_key, record_value = record
+            if record_key == key:
+                found_key = True
+                break
+        if found_key:
+            return record_value
+        else:
+            return "No record found"
+  
+    def __str__(self):
+        return "".join(str(item) for item in self.hash_table)
+  
+if __name__ == '__main__':  
 
-    return: 
-        a boolean
-    """
-    index = self.hash(key)
-
-    if self._buckets[index]:
-      return self._buckets[index].includes(key)
-    else:
-      return False
-
-  def hash(self,key:str)->int:
-    """
-    Get the indix of our array for a specific string key  
-
-    parameters:
-        key: a string
-    """
-    value=0
-
-    for x in key:
-      value += ord(x)
-    index = (value * 7) % self.size   
-    return index
+  hash_table = HashTable(1)
+  hash_table.add('samerodeh@gmail.com', 'Samer Odeh')
+  print(hash_table)
+  print()
+  print(hash_table.get('samerodeh@gmail.com'))
+  print()
