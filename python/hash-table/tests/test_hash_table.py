@@ -18,15 +18,3 @@ def test_get():
   excepted = 'value'
   assert actual == excepted
 
-#@pytest
-def test_contains():
-  actual = 'key'
-  excepted = True, False
-  assert actual == excepted
-
-#@pytest
-def test_hash():
-  actual = 'key'
-  excepted = 'String'
-  assert actual == excepted
-
