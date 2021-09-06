@@ -24,4 +24,4 @@
 | quick-sort | [python/quick-sort/README.md](python/quick-sort/README.md) |
 | hash-table | [python/hash-table/README.md](python/hash-table/README.md) |
 | hashmap-repeated-word | [python/hashmap-repeated-word/README.md](python/hashmap-repeated-word/README.md) |
-
+| hashmap-tree-intersection | [python/hashmap-tree-intersection/README.md](python/hashmap-tree-intersection/README.md) |
