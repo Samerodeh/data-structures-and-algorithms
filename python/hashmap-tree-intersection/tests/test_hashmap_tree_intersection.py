@@ -7,6 +7,18 @@ def test_version():
     assert __version__ == '0.1.0'
 
 #@pytest
+def test_add():
+  actual = 'key'
+  excepted = 'value'
+  assert actual == excepted
+
+#@pytest
+def test_get():
+  actual = 'key'
+  excepted = 'value'
+  assert actual == excepted
+  
+#@pytest
 def test_tree_intersection():
     tree1 = Counter("tree1")
     tree2 = Counter("tree2")
