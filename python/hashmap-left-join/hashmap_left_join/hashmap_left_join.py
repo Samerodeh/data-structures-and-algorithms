@@ -1,3 +1,5 @@
+from collections import defaultdict
+
 class Hashtable:
     def __init__(self, size):
         self.size = size
@@ -44,13 +46,19 @@ class Hashtable:
   
     def __str__(self):
         return "".join(str(item) for item in self.hash_table)
-  
-def left_join(hash_map1, hash_map2):
-    return(hash_map2.update(hash_map1))
-     
+ 
+def left_join(hash_map1, index1, hash_map2, index2):
+    hash_table = Hashtable(1024)
+    hash = defaultdict(list)
+    for i in hash_map1:
+        hash[i[index1]].append(i)
+    return [(i, r) for r in hash_map2 for i in hash[r[index2]]]
+
 if __name__ == '__main__':
 
-  hash_map1 = {'Samer':5, 'Odeh':10}
-  hash_map2 = {'Odeh':10, 'Samer':5}
-  print(left_join(hash_map1, hash_map2))
-  print(hash_map2)
+  hash_map1 = (23, "Samer"),
+  hash_map2 = ("Samer", "Odeh"),
+ 
+for row in left_join(hash_map1, 1, hash_map2, 0):
+    print(row)
+     
