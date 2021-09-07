@@ -1,4 +1,4 @@
-from collections import Counter
+import re
 
 class Hashtable:
     def __init__(self, size):
@@ -47,15 +47,18 @@ class Hashtable:
     def __str__(self):
         return "".join(str(item) for item in self.hash_table)
 
-def repeated_word(string):
-    lis = list(string.split(" "))
-    word = Counter(lis)
-    for i in lis:
-        if(word[i] > 1):
-            return i
+def repeated_word(sentence=None):
+    if sentence == None :
+        return 'the sentence is empty'
+
+    hash_table = Hashtable(1024)
+    sentence = re.sub('\W+', ' ', sentence).lower().split()
+
+    for word in sentence:
+        if hash_table.contains(word):
+            return word
         else:
-          if(word[i] < 1):
-           return None
+            hash_table.add(word, True)
  
 if __name__ == '__main__':
   sentence = "Once upon a time, there was a brave princess who..."
