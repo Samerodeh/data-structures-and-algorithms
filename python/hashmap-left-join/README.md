@@ -1,5 +1,4 @@
 # Hashmap LEFT JOIN
-<!-- Short summary or background information -->
 
 ## Challenge
 
@@ -17,21 +16,28 @@
 
 * Return: The returned data structure that holds the results is up to you. It doesn’t need to exactly match the output below, so long as it achieves the LEFT JOIN logic
 
-## WhiteBoard
-
-
 ## Approach & Efficiency
 
 ### What approach did you take? 
 
+*Algorithm.*
+
 ### Why? 
+
+*Because : It is Hash Map.*
 
 ### What is the Big O space/time for this approach? 
 
-*Time--> O(n^2)
-    
-*space--> O(n)
+**Time : O(n^2) : Because : The basic operation of this algorithm is comparison. This will happen n * (n-1) number of times…concluding the algorithm to be n squared.**
+
+**space : O(n) : Because : Unknown number of spaces.**
 
 
 ## Solution
-<!-- Embedded whiteboard image -->
+
+![WhiteBoard](asset/hashmap-left-join.png)
+
+| Subject     | links |
+| ----------- | ----------- |
+| hashmap_left_join | [hashmap_left_join/hashmap_left_join.py](hashmap_left_join/hashmap_left_join.py) |
+| test_hashmap_left_join | [tests/test_hashmap_left_join.py](tests/test_hashmap_left_join.py) |

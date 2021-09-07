@@ -47,9 +47,9 @@ class Hashtable:
     def __str__(self):
         return "".join(str(item) for item in self.hash_table)
 
-def repeated_word(string):
+def repeated_word(sentence):
     hash_table = Hashtable(1024)
-    lis = list(string.split(" "))
+    lis = list(sentence.split(" "))
     word = Counter(lis)
     for i in lis:
         if(word[i] > 1):
