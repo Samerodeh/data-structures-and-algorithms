@@ -48,7 +48,7 @@ class Hashtable:
         return "".join(str(item) for item in self.hash_table)
   
 def tree_intersection(tree1,tree2):
-
+    hash_table = Hashtable(1024)
     tree1 = Counter(tree1)
     tree2 = Counter(tree2)
     result = dict(tree1.items() & tree2.items())
