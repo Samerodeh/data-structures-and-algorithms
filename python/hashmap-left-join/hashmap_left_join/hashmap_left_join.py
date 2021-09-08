@@ -46,19 +46,29 @@ class Hashtable:
   
     def __str__(self):
         return "".join(str(item) for item in self.hash_table)
- 
-def left_join(hash_map1, index1, hash_map2, index2):
-    hash_table = Hashtable(1024)
-    hash = defaultdict(list)
-    for i in hash_map1:
-        hash[i[index1]].append(i)
-    return [(i, r) for r in hash_map2 for i in hash[r[index2]]]
 
-if __name__ == '__main__':
+def left_join(hash_map1,hash_map2):
+    result=[]
 
-  hash_map1 = (23, "Samer"),
-  hash_map2 = ("Samer", "Odeh"),
- 
-for row in left_join(hash_map1, 1, hash_map2, 0):
-    print(row)
-     
+    if hash_map1.map == hash_map1.size*[None] or hash_map2.map == hash_map2.size*[None] :
+        return 'hash map is empty'
+
+    for item in hash_map1.map:
+        if item:
+            arr=[]
+            arr.append(item.head.data[0])
+            arr.append(hash_map1.get(item.head.data[0]))
+            arr.append(hash_map2.get(item.head.data[0]))
+            result.append(arr) 
+    return result
+
+
+if __name__ == "__main__":
+
+    hash_map1 = Hashtable(1024)
+    hash_map1.add('Samer', 'Odeh')
+
+    hash_map2 = Hashtable(1024)
+    hash_map2.add('Odeh', 'Samer')
+
+    print(left_join(hash_map1,hash_map2))

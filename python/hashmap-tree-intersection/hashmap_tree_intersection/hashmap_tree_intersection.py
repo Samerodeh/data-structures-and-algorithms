@@ -1,5 +1,3 @@
-from collections import Counter
-
 class Hashtable:
     def __init__(self, size):
         self.size = size
@@ -47,24 +45,53 @@ class Hashtable:
     def __str__(self):
         return "".join(str(item) for item in self.hash_table)
   
-def tree_intersection(tree1,tree2):
-    hash_table = Hashtable(1024)
-    tree1 = Counter(tree1)
-    tree2 = Counter(tree2)
-    result = dict(tree1.items() & tree2.items())
-    array = []
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.left = None
+        self.right = None
 
-    for (key,value) in result.items():
-        for i in range(0,value):
-            array.append(key)  
-        return array
-        while i in range != (0,value):
-            return None
+class BinaryTrees:
+    def __init__(self):
+        self.root = None
+
+def tree_intersection(tree1,tree2):
+    result = []
+    hash_table = Hashtable(1024)
+
+    if tree1.root == None or tree2.root == None:
+        return 'tree is empty'
+
+    def tree_travers(node):
+        if hash_table.contains(str(node.value)):
+            nonlocal result
+            result += [node.value]
+        else:
+            hash_table.add(str(node.value),True)
+
+        if node.left:
+            tree_travers(node.left)
+        if node.right:
+            tree_travers(node.right)
+
+    tree_travers(tree1.root)
+    tree_travers(tree2.root)
+    return result
 
 if __name__ == "__main__":
 
-    tree1 = [10, 20, 30, 40, 50]
-    tree2 = [50, 60, 70, 80, 90]
-    print()
+    tree1 = BinaryTrees()
+    tree1.root = Node(20)
+    tree1.root.left = Node(10)
+    tree1.root.right = Node(50)
+    tree1.root.left.left = Node(30)
+    tree1.root.left.right = Node(40)
+
+    tree2 = BinaryTrees()
+    tree2.root = Node(60)
+    tree2.root.left = Node(50)
+    tree2.root.right = Node(90)
+    tree2.root.left.left = Node(70)
+    tree2.root.left.right = Node(80)
+
     print(tree_intersection(tree1,tree2))
-    print()
