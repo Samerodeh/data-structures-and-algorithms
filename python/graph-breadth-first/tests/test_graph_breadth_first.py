@@ -1,5 +1,5 @@
-from graph import __version__
-from graph.graph import *
+from graph_breadth_first import __version__
+from graph_breadth_first.graph_breadth_first import *
 import pytest
 
 #@pytest
@@ -38,4 +38,13 @@ def test_get_neighbors():
 def test_size(self):
     actual = len(self.graph) if len(self.graph) > 0 else None
     excepted = actual
+    assert actual == excepted
+
+#@pytest
+def test_breadth_first(self, vertex):
+    nodes = []
+    holder = set()
+    breadth = Queue()
+    actual = holder.add(vertex.value), breadth.enqueue(vertex)
+    excepted = nodes
     assert actual == excepted
