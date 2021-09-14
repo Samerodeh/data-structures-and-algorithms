@@ -29,3 +29,4 @@
 | graph | [python/graph/README.md](python/graph/README.md) |
 | graph-breadth-first | [python/graph-breadth-first/README.md](python/graph-breadth-first/README.md) |
 | graph-business-trip | [python/graph-business-trip/README.md](python/graph-business-trip/README.md) |
+| graph-depth-first | [python/graph-depth-first/README.md](python/graph-depth-first/README.md) |
